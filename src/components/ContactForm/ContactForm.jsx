@@ -3,9 +3,9 @@ import { nanoid } from 'nanoid';
 
 import { useState } from 'react';
 
-import { addContact } from 'components/services/api';
+import { apiAddContact } from 'components/services/api';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from './../../redux/selectors';
+import { selectContacts } from '../../redux/contacts/contactsSliceSelectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -53,7 +53,7 @@ export const ContactForm = () => {
 
     const newFriend = { ...formData, id: nanoid().toString() };
 
-    const action = addContact(newFriend);
+    const action = apiAddContact(newFriend);
     console.log(newFriend);
     dispatch(action);
 

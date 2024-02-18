@@ -1,0 +1,33 @@
+.app {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 24px;
+}
+
+.navLink {
+    font-size: 20px;
+    display: inline-flex;
+    padding: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.active {
+    color: blue;
+}
+
+header {
+    background-color: antiquewhite;
+    border-bottom-style: groove;
+}
+
+.movieDetails {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.additionalInfo {
+    margin-bottom: 10px;
+}
